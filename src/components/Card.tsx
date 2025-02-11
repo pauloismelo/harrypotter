@@ -49,12 +49,13 @@ const Card:FunctionComponent<CharacterProps> = ({id,name,species, gender, house,
                     <span className="text-black">Gender: </span>{gender}
                 </p>
                 <p className="text-sm text-gray-400">
-                    <span className="text-black">House: </span>{house}
+                    <span className="text-black">House: </span>{house ? house : "Unknown"}
                 </p>
             </div>
             <div className="w-1/2 p-4">
                 <p className="text-sm text-gray-400 text-right">
-                    <span className="text-black">Birth: </span>{dateOfBirth}
+                    
+                    <span className="text-black">Birth: </span>{dateOfBirth ? dateOfBirth : "Unknown"}
                 </p>
                 <div className="flex gap-2 mt-4 ml-auto justify-end">
                     <Button id={id} text="Details" type="button" handleclick={()=>{handleDetails(id)}} iconButton="faSearch" />
